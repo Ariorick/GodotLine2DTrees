@@ -9,9 +9,11 @@ func _ready():
 func _on_Button_pressed():
 	for tree in $Trees.get_children():
 		tree.generate()
+
+
+func _on_AnimateButton_pressed():
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("growth")
-
 
 func _on_HSlider_value_changed(value):
 	for tree in $Trees.get_children():
@@ -25,3 +27,4 @@ func _on_SaveButton_pressed():
 func _on_FileDialog_file_selected(path):
 	var result = ResourceSaver.save(path, $Trees/ProceduralTree.tree)
 	print(result)
+

@@ -1,0 +1,402 @@
+[gd_resource type="Resource" load_steps=58 format=2]
+
+[ext_resource path="res://src/Branch.gd" type="Script" id=1]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -44.1259, -23.514, -42.8918, -48.4835, -43.1872, -65.1475, -41.4245, -77.5226 )
+start_in_parent = 0.474509
+branches = [  ]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -36.7235, -33.9321, -30.8845, -58.2406, -34.3846, -74.5356, -33.5217, -87.0058 )
+start_in_parent = 0.289996
+branches = [  ]
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, -50.7539, -43.226, -44.3491, -75.9382, -45.9411, -98.1033, -45.2156, -114.754, -48.6084, -127.649 )
+start_in_parent = 0.421896
+branches = [ SubResource( 1 ), SubResource( 2 ) ]
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 5.75244, -39.5842, 13.2713, -58.117, 9.25225, -70.8302 )
+start_in_parent = 0.586949
+branches = [  ]
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -8.22571, -49.3187, -14.3916, -73.5464, -13.7453, -90.2006, -15.9319, -102.508 )
+start_in_parent = 0.478808
+branches = [ SubResource( 4 ) ]
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -35.7401, -17.9623, -35.4393, -37.9601, -38.1275, -51.0196 )
+start_in_parent = 0.351825
+branches = [  ]
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -7.84333, -49.381, -15.0356, -73.3241, -16.2262, -89.9482, -14.9695, -102.385 )
+start_in_parent = 0.463361
+branches = [ SubResource( 6 ) ]
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, -45.9839, -48.2693, -59.4094, -78.7794, -56.2578, -100.777, -58.861, -117.239, -61.3823, -130.332 )
+start_in_parent = 0.365562
+branches = [ SubResource( 5 ), SubResource( 7 ) ]
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 30.366, -26.0366, 19.6283, -42.9097, 15.9301, -55.7199 )
+start_in_parent = 0.231757
+branches = [  ]
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -11.424, -48.6774, -18.6307, -72.6162, -12.8015, -88.2302, -11.6778, -100.68 )
+start_in_parent = 0.446897
+branches = [ SubResource( 9 ) ]
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 8.4081, -39.1063, 14.0096, -58.3059, 10.6921, -71.2199 )
+start_in_parent = 0.291688
+branches = [  ]
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -44.2436, -23.2917, -55.8244, -45.4476, -49.896, -61.0242, -52.709, -73.2036 )
+start_in_parent = 0.624756
+branches = [ SubResource( 11 ) ]
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, -46.2938, -47.9722, -27.0512, -75.1905, -34.6929, -96.0575, -30.8577, -112.277, -29.072, -125.49 )
+start_in_parent = 0.277806
+branches = [ SubResource( 10 ), SubResource( 12 ) ]
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 1 )
+order = 2
+path = PoolVector2Array( 0, 0, 10.2598, -99.4723, 32.6897, -144.159, 35.4639, -177.377, 38.8456, -202.147, 41.6127, -221.955, 42.3943, -238.603 )
+start_in_parent = 0.617573
+branches = [ SubResource( 3 ), SubResource( 8 ), SubResource( 13 ) ]
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 29.6983, -26.7958, 39.2215, -44.3829, 37.6391, -57.622 )
+start_in_parent = 0.269428
+branches = [  ]
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 7.26513, -49.4694, 0.801467, -73.6193, -2.95555, -89.857, -2.10727, -102.328 )
+start_in_parent = 0.544917
+branches = [ SubResource( 15 ) ]
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -2.56282, -39.9178, -3.17195, -59.9085, -6.95318, -72.6945 )
+start_in_parent = 0.618118
+branches = [  ]
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -1.84727, -49.9659, -9.44349, -73.7839, -10.9814, -90.3794, -10.8718, -102.879 )
+start_in_parent = 0.517772
+branches = [ SubResource( 17 ) ]
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 14.756, -65.0131, 14.1459, -98.3409, 20.3375, -119.683, 20.2766, -136.35, 19.7428, -149.672 )
+start_in_parent = 0.467795
+branches = [ SubResource( 16 ), SubResource( 18 ) ]
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 12.3481, -38.0464, 23.5513, -54.614, 21.2343, -67.7444 )
+start_in_parent = 0.430892
+branches = [  ]
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -10.5163, -48.8816, -13.8394, -73.6597, -19.3278, -89.3968, -18.6495, -101.878 )
+start_in_parent = 0.466781
+branches = [ SubResource( 20 ) ]
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -18.6014, -35.4117, -8.46355, -52.6519, -7.11182, -65.9165 )
+start_in_parent = 0.356534
+branches = [  ]
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -24.5053, -43.5831, -24.9435, -68.5793, -18.7594, -84.0562, -20.7715, -96.3932 )
+start_in_parent = 0.22307
+branches = [ SubResource( 22 ) ]
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 49.0588, -45.1407, 65.3591, -74.2166, 56.6462, -94.6595, 51.5444, -110.526, 50.2901, -123.8 )
+start_in_parent = 0.28566
+branches = [ SubResource( 21 ), SubResource( 23 ) ]
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 38.0619, -12.3, 33.3699, -31.7419, 34.7781, -45.0006 )
+start_in_parent = 0.43179
+branches = [  ]
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 46.0765, -19.4154, 56.3043, -42.2275, 62.0237, -57.8821, 60.0127, -70.2193 )
+start_in_parent = 0.2992
+branches = [ SubResource( 25 ) ]
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, -47.185, -47.0959, -52.1456, -80.058, -59.7702, -100.931, -60.8216, -117.565, -64.0811, -130.494 )
+start_in_parent = 0.574245
+branches = [ SubResource( 26 ) ]
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 1 )
+order = 2
+path = PoolVector2Array( 0, 0, 32.5654, -94.5489, 50.2736, -141.308, 51.2055, -174.628, 45.4786, -198.964, 48.5392, -218.728, 50.2099, -235.311 )
+start_in_parent = 0.471673
+branches = [ SubResource( 19 ), SubResource( 24 ), SubResource( 27 ) ]
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 6.25051, -39.5086, 15.5638, -57.2078, 16.17, -70.5274 )
+start_in_parent = 0.698264
+branches = [  ]
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 24.9119, -43.352, 13.0525, -65.3601, 13.099, -82.0267, 11.7009, -94.4483 )
+start_in_parent = 0.509171
+branches = [ SubResource( 29 ) ]
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -6.23984, -39.5103, -4.43071, -59.4283, -9.00564, -71.9522 )
+start_in_parent = 0.699304
+branches = [  ]
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -48.1566, -13.4513, -62.0542, -34.2325, -59.9471, -50.7654, -61.1662, -63.2058 )
+start_in_parent = 0.657624
+branches = [ SubResource( 31 ) ]
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 56.2174, -35.8337, 74.7482, -63.5414, 65.49, -83.7432, 69.6952, -99.8706, 69.0167, -113.187 )
+start_in_parent = 0.685856
+branches = [ SubResource( 30 ), SubResource( 32 ) ]
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -6.98949, -39.3846, 5.00954, -55.3853, 0.38961, -67.8927 )
+start_in_parent = 0.69441
+branches = [  ]
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -23.4964, -44.1353, -26.0739, -69.002, -22.857, -85.3553, -23.5882, -97.8339 )
+start_in_parent = 0.217105
+branches = [ SubResource( 34 ) ]
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -34.5467, -20.1625, -46.0603, -36.516, -50.519, -49.0817 )
+start_in_parent = 0.337535
+branches = [  ]
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -37.8727, -32.6444, -39.008, -57.6186, -37.0914, -74.1747, -33.3802, -86.1111 )
+start_in_parent = 0.342592
+branches = [ SubResource( 36 ) ]
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 51.5934, -42.2204, 64.5941, -72.914, 69.775, -94.5238, 72.9276, -110.89, 75.885, -123.891 )
+start_in_parent = 0.584555
+branches = [ SubResource( 35 ), SubResource( 37 ) ]
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -36.1731, -17.0736, -40.724, -36.549, -36.031, -49.0291 )
+start_in_parent = 0.536927
+branches = [  ]
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -27.0774, -42.0335, -21.1035, -66.3093, -19.0263, -82.846, -16.8381, -95.153 )
+start_in_parent = 0.396554
+branches = [ SubResource( 39 ) ]
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 21.5225, -63.097, 9.0858, -94.0233, 13.5942, -115.783, 14.5057, -132.425, 17.1055, -145.503 )
+start_in_parent = 0.599988
+branches = [ SubResource( 40 ) ]
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 1 )
+order = 2
+path = PoolVector2Array( 0, 0, 23.9863, -97.0807, 12.5724, -145.76, 12.1032, -179.09, 13.4683, -204.053, 18.3239, -223.455, 20.5923, -239.966 )
+start_in_parent = 0.425789
+branches = [ SubResource( 33 ), SubResource( 38 ), SubResource( 41 ) ]
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 9.80002, -38.7809, 13.6096, -58.4147, 12.6355, -71.7124 )
+start_in_parent = 0.349839
+branches = [  ]
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 2.50953, -49.937, 7.51176, -74.4314, 1.25465, -89.879, -0.344274, -102.276 )
+start_in_parent = 0.229267
+branches = [ SubResource( 43 ) ]
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 54.0874, -38.9743, 56.1987, -72.2407, 48.0189, -92.9027, 45.2427, -109.336, 42.4504, -122.374 )
+start_in_parent = 0.339464
+branches = [ SubResource( 44 ) ]
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 2.7756, -39.9036, 4.45382, -59.833, 6.32471, -73.0345 )
+start_in_parent = 0.499122
+branches = [  ]
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -46.9571, -17.1764, -56.555, -40.2606, -58.2367, -56.8423, -55.4952, -69.0379 )
+start_in_parent = 0.688907
+branches = [ SubResource( 46 ) ]
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 35.842, -17.7582, 42.9249, -36.462, 43.3711, -49.7879 )
+start_in_parent = 0.384258
+branches = [  ]
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 32.0526, -38.3749, 31.1061, -63.3569, 37.5125, -78.7432, 33.6862, -90.6431 )
+start_in_parent = 0.66346
+branches = [ SubResource( 48 ) ]
+
+[sub_resource type="Resource" id=50]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, 37.6035, -55.0493, 21.556, -84.2655, 14.9901, -105.496, 12.8748, -122.027, 16.2521, -134.926 )
+start_in_parent = 0.223606
+branches = [ SubResource( 47 ), SubResource( 49 ) ]
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, -34.2228, -20.7075, -44.2017, -38.0402, -41.6935, -51.1355 )
+start_in_parent = 0.479857
+branches = [  ]
+
+[sub_resource type="Resource" id=52]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, 32.8818, -37.6668, 18.3811, -58.0317, 12.0371, -73.4438, 8.39054, -85.4001 )
+start_in_parent = 0.304897
+branches = [ SubResource( 51 ) ]
+
+[sub_resource type="Resource" id=53]
+script = ExtResource( 1 )
+order = 5
+path = PoolVector2Array( 0, 0, 2.86069, -39.8976, 13.7348, -56.6831, 17.5132, -69.4699 )
+start_in_parent = 0.469376
+branches = [  ]
+
+[sub_resource type="Resource" id=54]
+script = ExtResource( 1 )
+order = 4
+path = PoolVector2Array( 0, 0, -36.0392, -34.658, -49.4423, -55.7615, -48.6013, -72.4069, -50.1261, -84.8136 )
+start_in_parent = 0.571862
+branches = [ SubResource( 53 ) ]
+
+[sub_resource type="Resource" id=55]
+script = ExtResource( 1 )
+order = 3
+path = PoolVector2Array( 0, 0, -46.2938, -47.9722, -41.477, -80.9556, -40.0983, -103.135, -38.5159, -119.726, -40.0376, -132.973 )
+start_in_parent = 0.537858
+branches = [ SubResource( 52 ), SubResource( 54 ) ]
+
+[sub_resource type="Resource" id=56]
+script = ExtResource( 1 )
+order = 2
+path = PoolVector2Array( 0, 0, -77.6717, -62.985, -105.067, -104.812, -96.3205, -136.977, -91.5633, -161.521, -87.9893, -181.199, -88.3046, -197.862 )
+start_in_parent = 0.673327
+branches = [ SubResource( 45 ), SubResource( 50 ), SubResource( 55 ) ]
+
+[resource]
+script = ExtResource( 1 )
+order = 1
+path = PoolVector2Array( 0, 0, -6.55671e-06, -150, -36.2338, -243.205, -51.7871, -308.032, -42.3274, -357.129, -41.0179, -397.107, -39.4403, -430.403, -36.9291, -458.864 )
+start_in_parent = 0.0
+branches = [ SubResource( 14 ), SubResource( 28 ), SubResource( 42 ), SubResource( 56 ) ]

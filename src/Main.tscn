@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/tree/ProceduralTree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Main.gd" type="Script" id=2]
-[ext_resource path="res://assets/images/leaf.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=2]
 resource_name = "RESET"
@@ -45,24 +44,27 @@ margin_bottom = 651.0
 
 [node name="ProceduralTree" parent="Trees" instance=ExtResource( 1 )]
 position = Vector2( 518, 574 )
-first_angle = 1.194
-trunk_color = Color( 0.423529, 0.345098, 0.298039, 1 )
-leaf_texture = ExtResource( 3 )
-leaf_scale = 0.09
 
 [node name="Button" type="Button" parent="."]
 margin_left = 29.0
-margin_top = 455.0
+margin_top = 408.0
 margin_right = 97.0
-margin_bottom = 475.0
-text = "generate"
+margin_bottom = 428.0
+text = "Generate new"
+
+[node name="AnimateButton" type="Button" parent="."]
+margin_left = 26.0
+margin_top = 445.0
+margin_right = 94.0
+margin_bottom = 465.0
+text = "Animate growth"
 
 [node name="SaveButton" type="Button" parent="."]
 margin_left = 28.0
 margin_top = 483.0
 margin_right = 99.0
 margin_bottom = 503.0
-text = "Save tree"
+text = "Save as a resource"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.3
@@ -90,7 +92,16 @@ window_title = "Save ProceduralTree Resource"
 mode_overrides_title = false
 filters = PoolStringArray( "*.tres" )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 34.0
+margin_top = 555.0
+margin_right = 129.0
+margin_bottom = 569.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Growth (0 to 1)"
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="AnimateButton" to="." method="_on_AnimateButton_pressed"]
 [connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="file_selected" from="CanvasLayer/FileDialog" to="." method="_on_FileDialog_file_selected"]

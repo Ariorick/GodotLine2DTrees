@@ -13,11 +13,15 @@ export(float, -3.14, 3.14) var first_angle = 0.0
 export(float, 0, 1000) var first_length = 200.0
 
 export var ___ = 'Visual Settings'
-export var trunk_color = Color.black
+export(float, 0, 1) var growth = 1.0
+
+export var trunk_color = Color("#6c584c")
+
 export(int, 0, 20) var leaf_count = 7
 export(Texture) var leaf_texture: Texture
 export(float, 0, 10) var leaf_scale = 1.0
-export(float, 0, 1) var growth = 1.0
+export(Color) var leaf_color1 = Color("#DDE5B6")
+export(Color) var leaf_color2 = Color("#ADC178")
 
 
 var root: BranchLine2D
@@ -34,10 +38,10 @@ func generate():
 
 func draw():
 	delete_children($TreeBase)
-	delete_children($ViewportContainer/Viewport)
 	root = draw_branch(tree, null, null)
 
 
+# Create new Branch resource, representing the tree
 func create_tree(length: int, order: int) -> Branch:
 	var root := Branch.new()
 	root.order = order
@@ -67,13 +71,15 @@ func create_tree(length: int, order: int) -> Branch:
 func _process(delta):
 	root.growth = pow(growth, 0.35)
 
+# Use Branch to make new Line2D's 
 func draw_branch(branch: Branch, parent_line, parent_branch) -> BranchLine2D:
 	var line := BranchLine2D.new()
 	line.order = branch.order
-	line.viewport_container = $ViewportContainer
 	line.leaf_texture = leaf_texture
 	line.leaf_scale = leaf_scale
 	line.leaf_count = leaf_count
+	line.leaf_color1 = leaf_color1
+	line.leaf_color2 = leaf_color2
 	
 	line.default_color = trunk_color
 	line.antialiased = true

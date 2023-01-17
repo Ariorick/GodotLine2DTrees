@@ -4,22 +4,23 @@ class_name BranchLine2D
 # public vars
 var position_on_branch: float
 var order: int
-var viewport_container: ViewportContainer
 var leaf_count: int
 var leaf_texture: Texture
 var leaf_scale: float = 1.0
+var leaf_color1: Color
+var leaf_color2: Color
 var growth: float = 1.0
 
-var viewport: Viewport
 var tween: Tween
-var sprite: Sprite
 
 onready var start_width = width
 onready var start_position = position
 onready var path = points
 
+
+var broken := false
+
 func _ready():
-	viewport = viewport_container.get_child(0)
 	if order > 1:
 		tween = Tween.new()
 		add_child(tween)
@@ -32,7 +33,7 @@ func _ready():
 
 
 func add_sprite(position_on_branch: float, rotation: float):
-	sprite = LeafSprite.new()
+	var sprite = LeafSprite.new()
 	sprite.position_on_branch = position_on_branch
 	sprite.centered = false
 	sprite.z_index = 1
@@ -41,21 +42,28 @@ func add_sprite(position_on_branch: float, rotation: float):
 	sprite.scale = Vector2.ONE * leaf_scale
 	sprite.rotation = rotation
 	if Random.boolean():
-		sprite.modulate = Color("#DDE5B6")
+		sprite.modulate = leaf_color1
 	else:
-		sprite.modulate = Color("#ADC178")
+		sprite.modulate = leaf_color2
 	add_child(sprite)
 
 func _process(delta):
+	#Branches braking off
+#	if OS.get_ticks_msec() > 10000 and order > 2 and randf() < 0.001:
+#		reparent()
+#		broken = true
+#	if broken:
+#		global_position += Vector2(-1, 3)
+#		rotation -= 0.01
+#		return
+	
 	var own_growth = growth
 	var order_k = order + 1
 	if order_k > 1:
 		own_growth = max(0, growth * (order_k- 1) - (order_k-2))
 		
 	
-#	scale = Vector2.ONE * own_growth
 	var new_points = Array(path)
-#	points = PoolVector2Array(new_points.slice((path.size() - 1) * (1-own_growth), path.size() - 1))
 	points = PoolVector2Array(new_points.slice(0, (path.size() - 1) * (own_growth)))
 	position = start_position - points[0] * own_growth
 	width = start_width * own_growth
@@ -78,3 +86,10 @@ func start_tween():
 
 func on_tween_completed(object, key):
 	start_tween()
+
+func reparent():
+	var saved_position = global_position
+	var new_parent = find_parent("TreeBase")
+	get_parent().remove_child(self)
+	new_parent.add_child(self)
+	global_position = saved_position

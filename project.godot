@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "ArrayUtils",
-"language": "GDScript",
-"path": "res://src/utils/ArrayUtils.gd"
-}, {
 "base": "Resource",
 "class": "Branch",
 "language": "GDScript",
@@ -24,58 +19,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/tree/BranchLine2D.gd"
 }, {
-"base": "Reference",
-"class": "Drawing",
+"base": "Sprite",
+"class": "LeafSprite",
 "language": "GDScript",
-"path": "res://src/utils/Drawing.gd"
-}, {
-"base": "Reference",
-"class": "JsonFormatter",
-"language": "GDScript",
-"path": "res://src/utils/JsonFormatter.gd"
-}, {
-"base": "Node",
-"class": "Math",
-"language": "GDScript",
-"path": "res://src/utils/Math.gd"
-}, {
-"base": "Node",
-"class": "NodeUtils",
-"language": "GDScript",
-"path": "res://src/utils/NodeUtils.gd"
-}, {
-"base": "Reference",
-"class": "Noise",
-"language": "GDScript",
-"path": "res://src/utils/Noise.gd"
-}, {
-"base": "Node",
-"class": "PoolVector2Utils",
-"language": "GDScript",
-"path": "res://src/utils/PoolVector2Utils.gd"
+"path": "res://src/tree/LeafSprite.gd"
 }, {
 "base": "Node2D",
 "class": "ProceduralTree",
 "language": "GDScript",
 "path": "res://src/tree/ProceduralTree.gd"
-}, {
-"base": "Node",
-"class": "StringUtils",
-"language": "GDScript",
-"path": "res://src/utils/StringUtils.gd"
 } ]
 _global_script_class_icons={
-"ArrayUtils": "",
 "Branch": "",
 "BranchLine2D": "",
-"Drawing": "",
-"JsonFormatter": "",
-"Math": "",
-"NodeUtils": "",
-"Noise": "",
-"PoolVector2Utils": "",
-"ProceduralTree": "",
-"StringUtils": ""
+"LeafSprite": "",
+"ProceduralTree": ""
 }
 
 [application]
@@ -86,8 +44,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Random="*res://src/utils/Random.gd"
 Ref="*res://src/Ref.gd"
+Random="*res://src/tree/Random.gd"
 
 [gui]
 

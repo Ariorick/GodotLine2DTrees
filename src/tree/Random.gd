@@ -4,12 +4,8 @@ var _rng : = RandomNumberGenerator.new()
 
 func _ready():
 	_rng.randomize()
+	pass
 
-func rand_sign() -> int:
-	if boolean():
-		return 1
-	else:
-		return -1
 
 func f_range(start: float, end: float)  -> float:
 	return _rng.randf_range(start, end)

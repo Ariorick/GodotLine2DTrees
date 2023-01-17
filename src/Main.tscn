@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/tree/ProceduralTree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Main.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/leaf.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=2]
 resource_name = "RESET"
 tracks/0/type = "value"
-tracks/0/path = NodePath("ProceduralTree:growth")
+tracks/0/path = NodePath("HSlider:value")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -21,7 +22,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=1]
 resource_name = "growth"
 tracks/0/type = "value"
-tracks/0/path = NodePath("ProceduralTree:growth")
+tracks/0/path = NodePath("HSlider:value")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -36,18 +37,60 @@ tracks/0/keys = {
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="ProceduralTree" parent="." instance=ExtResource( 1 )]
-position = Vector2( 556, 610 )
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1106.0
+margin_bottom = 651.0
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="ProceduralTree" parent="Trees" instance=ExtResource( 1 )]
+position = Vector2( 518, 574 )
+first_angle = 1.194
+trunk_color = Color( 0.423529, 0.345098, 0.298039, 1 )
+leaf_texture = ExtResource( 3 )
+leaf_scale = 0.09
 
 [node name="Button" type="Button" parent="."]
-margin_left = 75.0
-margin_top = 545.0
-margin_right = 87.0
-margin_bottom = 565.0
+margin_left = 29.0
+margin_top = 455.0
+margin_right = 97.0
+margin_bottom = 475.0
 text = "generate"
 
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 28.0
+margin_top = 483.0
+margin_right = 99.0
+margin_bottom = 503.0
+text = "Save tree"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 0.3
 anims/RESET = SubResource( 2 )
 anims/growth = SubResource( 1 )
 
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 29.0
+margin_top = 578.0
+margin_right = 271.0
+margin_bottom = 594.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FileDialog" type="FileDialog" parent="CanvasLayer"]
+margin_left = 301.0
+margin_top = 125.0
+margin_right = 779.0
+margin_bottom = 537.0
+rect_min_size = Vector2( 400, 140 )
+window_title = "Save ProceduralTree Resource"
+mode_overrides_title = false
+filters = PoolStringArray( "*.tres" )
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="file_selected" from="CanvasLayer/FileDialog" to="." method="_on_FileDialog_file_selected"]

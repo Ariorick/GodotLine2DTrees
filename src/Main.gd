@@ -1,10 +1,6 @@
 extends Node2D
 
 
-func _ready():
-	Ref.viewport = $ViewportContainer/Viewport
-
-
 
 func _on_Button_pressed():
 	for tree in $Trees.get_children():

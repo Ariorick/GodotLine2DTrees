@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=57 format=2]
 
-[ext_resource path="res://src/Branch.gd" type="Script" id=1]
+[ext_resource path="res://src/tree/Branch.gd" type="Script" id=1]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 1 )

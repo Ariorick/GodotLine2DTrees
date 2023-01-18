@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Branch",
 "language": "GDScript",
-"path": "res://src/Branch.gd"
+"path": "res://src/tree/Branch.gd"
 }, {
 "base": "Line2D",
 "class": "BranchLine2D",
